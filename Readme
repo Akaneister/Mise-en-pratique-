@@ -1,0 +1,30 @@
+# Mise en pratique accompagnée
+
+## Liste des problèmes identifiés
+
+* **Superposition de jobs** → à ignorer.
+* **Décalage horaire de 2h** entre les fichiers *Assistance* et *Conso*.
+* **Mauvais formatage** sur certaines coordonnées (ex. double point `..` ou consommation negative ).
+* **Décalage de démarrage de la consommation** : la consommation commence souvent légèrement après le début du job → faut-il inclure les valeurs à zéro avant le démarrage réel pour la moyenne ?
+* **Cas d’un seul moteur actif** : comment traiter les périodes où un seul moteur fonctionne ? inclut dans la moyenne ? 
+
+---
+
+## Objectifs
+
+* **Nettoyage des données** :
+
+  * Corriger les erreurs de format (ex. `..` dans les coordonnées).
+  * Supprimer ou ignorer les valeurs incohérentes (valeurs négatives, NaN, etc.).
+
+* **Création de nouvelles colonnes** :
+
+  * Calculer la consommation entre chaque intervalle horaire (`Start Job` / `End Job`).
+
+* **Visualisation** :
+
+  * Générer des histogrammes et diagrammes pour observer l’évolution de la consommation de carburant, par exemple sur la période du **08/06 à 00:45**.
+
+---
+
+
